@@ -110,11 +110,15 @@
     <Build Include="Security\History.sql" />
     <Build Include="Storage\History.sql" />
     <Build Include="dbo\Tables\DimMyExample.sql" />
-    <Build Include="T4_Templates\HistoryTables.sql">
-      <DependentUpon>T4_Templates\HistoryTables.tt</DependentUpon>
+    <Build Include="Security\Auditing.sql" />
+    <Build Include="T4_Templates\AuditingTriggers.sql">
+      <DependentUpon>T4_Templates\AuditingTriggers.tt</DependentUpon>
     </Build>
     <Build Include="T4_Templates\HistoryTriggers.sql">
       <DependentUpon>T4_Templates\HistoryTriggers.tt</DependentUpon>
+    </Build>
+    <Build Include="T4_Templates\HistoryTables.sql">
+      <DependentUpon>T4_Templates\HistoryTables.tt</DependentUpon>
     </Build>
     <Build Include="T4_Templates\ListFKs.sql">
       <DependentUpon>T4_Templates\ListFKs.tt</DependentUpon>
@@ -127,6 +131,9 @@
     </Build>
     <Build Include="T4_Templates\InMemoryDatabaseModelInclude.sql">
       <DependentUpon>T4_Templates\InMemoryDatabaseModelInclude.tt</DependentUpon>
+    </Build>
+    <Build Include="T4_Templates\AuditingTables.sql">
+      <DependentUpon>T4_Templates\AuditingTables.tt</DependentUpon>
     </Build>
   </ItemGroup>
   <ItemGroup>
@@ -146,6 +153,13 @@
       <Generator>TextTemplatingFileGenerator</Generator>
     </None>
     <None Include="T4_Templates\ListViews.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Include="T4_Templates\AuditingTables.json" />
+    <None Include="T4_Templates\AuditingTables.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Include="T4_Templates\AuditingTriggers.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
     </None>
   </ItemGroup>
